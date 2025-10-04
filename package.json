@@ -1,11 +1,15 @@
 {
-  "name": "morph-openrouter-mcp-server",
+  "name": "@friday-friday/morph-openrouter-mcp-server",
   "version": "0.1.0",
   "description": "Local MCP server that proxies Morph fast apply via OpenRouter.",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/ericbfriday/morph-via-openrouter"
+  },
   "files": [
     "dist"
   ],
