@@ -1,0 +1,44 @@
+{
+  "name": "morph-openrouter-mcp-server",
+  "version": "0.1.0",
+  "description": "Local MCP server that proxies Morph fast apply via OpenRouter.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "morph-mcp-server": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./cli": {
+      "import": "./dist/cli.js"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "clean": "rimraf dist",
+    "start": "node ./dist/cli.js",
+    "test": "vitest"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "rimraf": "^5.0.5",
+    "tsdown": "^0.15.6",
+    "typescript": "^5.4.2",
+    "vitest": "^3.2.4"
+  }
+}
