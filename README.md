@@ -48,3 +48,41 @@ Add `--port`, `--model`, `--base-url`, or `--api-key` CLI flags to override defa
 - Optional: `LOG_LEVEL` env var for logging verbosity (debug, info, warn, error)
 
 A `GET /health` endpoint is also available for readiness checks.
+
+## Claude Code Integration
+
+This repository includes Claude Code configuration to enforce best practices and enable MCP server integration.
+
+### Superclaude Plugin Enforcement
+
+The `.claude/settings.json` file enforces the use of the superclaude plugin for enhanced code editing capabilities:
+
+```json
+{
+  "plugins": {
+    "required": ["superclaude"],
+    "superclaude": {
+      "enabled": true,
+      "enforced": true
+    }
+  }
+}
+```
+
+This ensures that all contributors using Claude Code have consistent tooling and capabilities.
+
+### MCP Servers Configuration
+
+The `.claude/mcp.json` file configures MCP servers for use with Claude Code:
+
+- **morph-openrouter**: This local server (the project itself) for Morph fast apply requests
+- **filesystem**: Standard MCP filesystem server for file operations
+- **git**: Standard MCP git server for repository operations
+
+To use these MCP servers with Claude Code:
+
+1. Copy `.env.example` to `.env` and fill in your OpenRouter API key
+2. Run `npm install && npm run build` to build the project
+3. Open the project in Claude Code - the MCP servers will be available based on the configuration
+
+Environment variables referenced in `.claude/mcp.json` are automatically sourced from your `.env` file.
