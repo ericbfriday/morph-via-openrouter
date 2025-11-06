@@ -53,23 +53,31 @@ A `GET /health` endpoint is also available for readiness checks.
 
 This repository includes Claude Code configuration to enforce best practices and enable MCP server integration.
 
-### Superclaude Plugin Enforcement
+### Superclaude Plugin Requirement
 
-The `.claude/settings.json` file enforces the use of the superclaude plugin for enhanced code editing capabilities:
+**Important**: This repository requires the [SuperClaude plugin](https://github.com/SuperClaude-Org/SuperClaude_Plugin) for Claude Code.
 
-```json
-{
-  "plugins": {
-    "required": ["superclaude"],
-    "superclaude": {
-      "enabled": true,
-      "enforced": true
-    }
-  }
-}
+SuperClaude is a third-party, open-source framework that provides:
+- 19+ specialized development commands (build, analyze, optimize, review, audit, etc.)
+- 9 expert personas for domain-specific guidance
+- Enhanced code editing and workflow automation capabilities
+
+**Installation** (choose one method):
+```bash
+# Via Claude Code Marketplace (recommended)
+/plugin marketplace add SuperClaude-Org/SuperClaude_Plugin
+/plugin install sc@superclaude-official
+
+# Via pip
+pip install SuperClaude
+
+# Via npm
+npm install -g @bifrost_inc/superclaude
 ```
 
-This ensures that all contributors using Claude Code have consistent tooling and capabilities.
+See [`.claude/CLAUDE_CODE.md`](./.claude/CLAUDE_CODE.md) for detailed installation instructions and plugin information.
+
+The `.claude/settings.json` file enforces this requirement to ensure consistent tooling across all contributors.
 
 ### MCP Servers Configuration
 
