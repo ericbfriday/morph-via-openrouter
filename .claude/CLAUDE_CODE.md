@@ -120,7 +120,7 @@ All environment variables are documented in `.env.example`:
 - `OPENROUTER_TITLE`: Analytics title
 - `MORPH_ENV_PATH`: Custom path to env file
 
-## Superclaude Plugin
+## SuperClaude Plugin
 
 ### What is SuperClaude?
 
