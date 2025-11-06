@@ -49,6 +49,24 @@ Add `--port`, `--model`, `--base-url`, or `--api-key` CLI flags to override defa
 
 A `GET /health` endpoint is also available for readiness checks.
 
+## Documentation
+
+For comprehensive documentation, see:
+
+- **[Documentation Index](./docs/INDEX.md)** - Complete navigation and quick reference
+- **[API Reference](./docs/API.md)** - Detailed endpoint documentation with examples
+- **[Configuration Guide](./docs/CONFIGURATION.md)** - All configuration options and deployment examples
+- **[Architecture](./docs/ARCHITECTURE.md)** - System design and implementation details
+- **[Development Guide](./docs/DEVELOPMENT.md)** - Contributing and development workflow
+
+### Quick Links
+
+- [Getting Started](./docs/INDEX.md#for-new-users) - First time setup
+- [API Examples](./docs/API.md#examples) - Code examples (cURL, Node.js)
+- [Docker Deployment](./docs/CONFIGURATION.md#docker-setup) - Run with Docker
+- [Kubernetes Deployment](./docs/CONFIGURATION.md#kubernetes-setup) - Deploy to K8s
+- [Troubleshooting](./docs/CONFIGURATION.md#troubleshooting) - Common issues
+
 ## Claude Code Integration
 
 This repository includes Claude Code configuration to enforce best practices and enable MCP server integration.
@@ -94,3 +112,7 @@ To use these MCP servers with Claude Code:
 3. Open the project in Claude Code - the MCP servers will be available based on the configuration
 
 Environment variables referenced in `.claude/mcp.json` are automatically sourced from your `.env` file.
+
+## License
+
+MIT
