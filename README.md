@@ -75,7 +75,7 @@ This ensures that all contributors using Claude Code have consistent tooling and
 
 The `.claude/mcp.json` file configures MCP servers for use with Claude Code:
 
-- **morph-openrouter**: This local server (the project itself) for Morph fast apply requests
+- **morph-openrouter**: The local server (the project itself) for Morph fast apply requests
 - **filesystem**: Standard MCP filesystem server for file operations
 - **git**: Standard MCP git server for repository operations
 
