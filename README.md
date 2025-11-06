@@ -53,7 +53,7 @@ A `GET /health` endpoint is also available for readiness checks.
 
 This repository includes Claude Code configuration to enforce best practices and enable MCP server integration.
 
-### Superclaude Plugin Requirement
+### SuperClaude Plugin Requirement
 
 **Important**: This repository requires the [SuperClaude plugin](https://github.com/SuperClaude-Org/SuperClaude_Plugin) for Claude Code.
 
