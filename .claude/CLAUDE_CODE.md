@@ -120,14 +120,88 @@ All environment variables are documented in `.env.example`:
 - `OPENROUTER_TITLE`: Analytics title
 - `MORPH_ENV_PATH`: Custom path to env file
 
-## Superclaude Plugin Benefits
+## SuperClaude Plugin
 
-The enforced superclaude plugin provides:
+### What is SuperClaude?
 
-- Enhanced code editing capabilities
-- Improved context understanding
-- Better code generation and refactoring
-- Consistent editing experience across the team
+**SuperClaude** is a third-party, open-source framework that augments Claude Code with specialized development capabilities. It is **not** an official Anthropic plugin but rather an independent project maintained by the community.
+
+**Important**: This repository enforces SuperClaude as a required plugin. You must install it to work with Claude Code on this project.
+
+### Key Features
+
+SuperClaude transforms Claude Code into a structured expert development platform by providing:
+
+- **19+ specialized commands**: Covering the entire development lifecycle (build, analyze, optimize, review, audit, deploy, test, etc.)
+- **9 expert personas**: Domain-specific expertise (architect, security, backend, QA, performance, mentor, etc.)
+- **Enhanced code editing**: Improved context understanding and code generation
+- **Workflow automation**: Advanced automation, context persistence, and task orchestration
+- **Evidence-based development**: Contextual memory and rules-engine to reduce hallucinations
+
+### Installation
+
+You must install SuperClaude before working with this repository. Choose one of the following methods:
+
+#### Option 1: Claude Code Marketplace (Recommended)
+
+```bash
+# Add the SuperClaude plugin via marketplace
+/plugin marketplace add SuperClaude-Org/SuperClaude_Plugin
+/plugin install sc@superclaude-official
+
+# Restart Claude Code to activate
+```
+
+#### Option 2: GitHub (Manual Install)
+
+```bash
+# Clone the repository
+git clone https://github.com/SuperClaude-Org/SuperClaude_Plugin.git
+cd SuperClaude_Plugin
+
+# Run the installer (copies config to ~/.claude/)
+./install.sh
+```
+
+#### Option 3: Package Managers
+
+**Python (pip):**
+```bash
+pip install SuperClaude
+```
+
+**Node.js (npm):**
+```bash
+npm install -g @bifrost_inc/superclaude
+```
+
+**pipx:**
+```bash
+pipx install SuperClaude
+```
+
+**uv:**
+```bash
+uv tool install SuperClaude
+```
+
+**Note**: If upgrading, uninstall older versions first to avoid configuration conflicts.
+
+### Why is SuperClaude Required?
+
+This project enforces SuperClaude to ensure:
+
+- Consistent development experience across all contributors
+- Access to advanced code editing and analysis capabilities
+- Standardized workflow automation and task orchestration
+- Expert-level domain guidance for code reviews and security audits
+
+### Resources
+
+- **GitHub Repository**: https://github.com/SuperClaude-Org/SuperClaude_Plugin
+- **Documentation**: https://claudelog.com/claude-code-mcps/super-claude/
+- **PyPI Package**: https://pypi.org/project/SuperClaude/
+- **License**: MIT (Open Source)
 
 ## Troubleshooting
 
