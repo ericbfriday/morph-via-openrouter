@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schemas.anthropic.ai/claude-code/settings.json",
+  "plugins": {
+    "required": ["superclaude"],
+    "superclaude": {
+      "enabled": true,
+      "enforced": true
+    }
+  },
+  "editor": {
+    "formatOnSave": true,
+    "tabSize": 2
+  },
+  "git": {
+    "autoStage": false,
+    "requireCommitMessage": true
+  },
+  "security": {
+    "allowFileAccess": true,
+    "allowNetworkAccess": true
+  }
+}

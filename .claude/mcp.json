@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.anthropic.ai/claude-code/mcp.json",
+  "mcpServers": {
+    "morph-openrouter": {
+      "command": "node",
+      "args": ["dist/cli.js"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "MORPH_API_KEY": "${env:MORPH_API_KEY}",
+        "MORPH_BASE_URL": "${env:MORPH_BASE_URL}",
+        "MORPH_MODEL": "${env:MORPH_MODEL}",
+        "PORT": "${env:PORT}",
+        "LOG_LEVEL": "${env:LOG_LEVEL}",
+        "OPENROUTER_REFERRER": "${env:OPENROUTER_REFERRER}",
+        "OPENROUTER_TITLE": "${env:OPENROUTER_TITLE}"
+      },
+      "description": "Local Morph MCP server that proxies fast apply requests to OpenRouter",
+      "enabled": true,
+      "autoStart": false
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"],
+      "description": "MCP filesystem server for local file operations",
+      "enabled": true,
+      "autoStart": true
+    },
+    "git": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-git"],
+      "cwd": "${workspaceFolder}",
+      "description": "MCP git server for repository operations",
+      "enabled": true,
+      "autoStart": true
+    }
+  },
+  "defaults": {
+    "timeout": 30000,
+    "retryAttempts": 3,
+    "retryDelay": 1000
+  }
+}
